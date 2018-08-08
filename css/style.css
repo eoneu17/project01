@@ -16,6 +16,7 @@ ul {
 .top {
   width: 980px;
   padding: 5px;
+  margin: 0 auto;
 }
 
 .top ul {
@@ -38,22 +39,21 @@ ul {
 /* logo */
 
 .logo {
+  margin: 0 auto;
+  width: 980px;
   position: relative;
   height: 75px;
   background: lightyellow;
+  padding: 12px;
 }
 
 h1 {
   text-align: center;
-  top: 50%;
-  -webkit-transition: translate(0 -50%);
-  -o-transition: translate(0 -50%);
-  transition: translate(0 -50%);
 }
 
 .toggleIcon {
   position: absolute;
-  top: 0;
+  top: 14px;
   right: 0;
   width: 45px;
   height: 45px;
