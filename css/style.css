@@ -1,11 +1,11 @@
 @charset "UTF-8";
-ul, .main nav, .picture, .icon {
+ul, .main nav, .picture, .icon, section .fwrap {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
 }
 
-.top, .logo, .contents, footer, .main nav {
+.top, .logo, .contents, .main nav, .fwrap {
   margin: 0 auto;
   width: 980px;
 }
@@ -366,4 +366,45 @@ p.blue {
 
 .i3 div {
   background-position: 650px 0;
+}
+
+/* contents end */
+
+/* footer start */
+footer{
+  color: #ccc;
+  font-size: 12px;
+}
+
+footer nav{
+  background: #4d4d4d;
+  height: 43px;
+}
+
+footer section{
+  background: #5e5e5e;
+  height: 103px;
+}
+
+.fwrap{
+  justify-content: flex-start;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+footer h1{
+  color: #fff;
+  flex-basis: 160px;
+  text-align: left;
+}
+
+nav>.fwrap{
+  position: relative;
+}
+.topbtn{
+  right: 0;
+}
+.fwrap>ul{
+  -ms-align-items: center;
+  align-items: center;
 }
