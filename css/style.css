@@ -5,6 +5,11 @@ ul {
   display: flex;
 }
 
+.top, .logo, .contents, footer{
+  margin: 0 auto;
+  width: 980px;
+}
+
 /* header start */
 
 /* top menu */
@@ -14,9 +19,7 @@ ul {
 }
 
 .top {
-  width: 980px;
   padding: 5px;
-  margin: 0 auto;
 }
 
 .top ul {
@@ -25,11 +28,12 @@ ul {
 
 .top li {
   padding: 0 10px;
-  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
-.top li:first-child {
-  border-left: none;
+.top li:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
 .top li:hover {
@@ -39,11 +43,8 @@ ul {
 /* logo */
 
 .logo {
-  margin: 0 auto;
-  width: 980px;
   position: relative;
   height: 75px;
-  background: lightyellow;
   padding: 12px;
 }
 
@@ -61,11 +62,130 @@ h1 {
   padding-top: 10px;
 }
 
-[class*=bar] {
+header [class*=bar] {
   width: 20px;
   height: 2px;
   background: #666666;
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.global {
+  background: #1c5da3;
+  width: 100%;
+}
+
+.global ul {
+  height: 45px;
+  width: 980px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.global li {
+  flex-basis: 165px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  border-left: 1px solid #336eac;
+}
+
+.global li:last-child {
+  border-right: 1px solid #336eac;
+}
+
+/* header end */
+
+/* main section start */
+
+/* slide */
+
+.slide {
+  width: 100%;
+  height: 400px;
+  background: url(../img/banner.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.swrap {
+  margin: 0 auto;
+  width: 980px;
+  position: relative;
+}
+
+.bulb {
+  position: absolute;
+  top: 45px;
+  right: 110px;
+  width: 250px;
+}
+
+.light {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffff00;
+  position: absolute;
+  top: 50px;
+  right: 85px;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 163, 1) 1%, rgba(255, 255, 255, 0) 60%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 163, 1) 1%, rgba(255, 255, 255, 0) 60%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(255, 255, 163, 1) 1%, rgba(255, 255, 255, 0) 60%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-transition: transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s;
+}
+
+.slide:hover .light{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.text{
+  font-size: 72px;
+  line-height: 82px;
+  letter-spacing: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 60px;
+}
+
+.text span{
+  background: linear-gradient(to bottom , #ffffff, #d6d6d6);
+  background: -moz-linear-gradient(to bottom , #ffffff, #d6d6d6);
+  background: -webkit-linear-gradient(to bottom , #ffffff, #d6d6d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subt{
+  position: absolute;
+  font-size: 16px;
+  top: 255px;
+  color: #fff;
+  text-shadow: 0 0 5px #1A2F5C;
+}
+
+.bars div{
+  position: absolute;
+  width: 58px; height: 4px;
+  background: #fff;
+  top: 331px;
+  left: 65px;
+}
+
+.bars div:first-child{
+  background: #15477C;
+  left: 0;
+}
+
+.bars div:last-child{
+  left: 130px;
 }
