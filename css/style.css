@@ -1,11 +1,11 @@
 @charset "UTF-8";
-ul {
+ul, .main nav, .picture, .icon {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
 }
 
-.top, .logo, .contents, footer{
+.top, .logo, .contents, footer, .main nav {
   margin: 0 auto;
   width: 980px;
 }
@@ -15,7 +15,7 @@ ul {
 /* top menu */
 
 .underline {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 
 .top {
@@ -28,7 +28,8 @@ ul {
 
 .top li {
   padding: 0 10px;
-  border-right: 1px solid #000;
+  color: #888;
+  border-right: 1px solid #ddd;
 }
 
 .top li:last-child {
@@ -37,7 +38,7 @@ ul {
 }
 
 .top li:hover {
-  color: skyblue;
+  color: #000;
 }
 
 /* logo */
@@ -101,6 +102,10 @@ header [class*=bar] {
 
 /* slide */
 
+.main {
+  background: #eee;
+}
+
 .slide {
   width: 100%;
   height: 400px;
@@ -116,10 +121,11 @@ header [class*=bar] {
 }
 
 .bulb {
+  width: 100%;
+  height: 400px;
   position: absolute;
-  top: 45px;
-  right: 110px;
-  width: 250px;
+  right: 0;
+  background: url(../img/bulb.png) no-repeat 610px 45px;
 }
 
 .light {
@@ -142,13 +148,13 @@ header [class*=bar] {
   transition: transform .5s;
 }
 
-.slide:hover .light{
+.slide:hover .light {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.text{
+.text {
   font-size: 72px;
   line-height: 82px;
   letter-spacing: 30px;
@@ -157,15 +163,15 @@ header [class*=bar] {
   top: 60px;
 }
 
-.text span{
-  background: linear-gradient(to bottom , #ffffff, #d6d6d6);
-  background: -moz-linear-gradient(to bottom , #ffffff, #d6d6d6);
-  background: -webkit-linear-gradient(to bottom , #ffffff, #d6d6d6);
+.text span {
+  background: linear-gradient(to bottom, #ffffff, #d6d6d6);
+  background: -moz-linear-gradient(to bottom, #ffffff, #d6d6d6);
+  background: -webkit-linear-gradient(to bottom, #ffffff, #d6d6d6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.subt{
+.subt {
   position: absolute;
   font-size: 16px;
   top: 255px;
@@ -173,19 +179,191 @@ header [class*=bar] {
   text-shadow: 0 0 5px #1A2F5C;
 }
 
-.bars div{
+.bars div {
   position: absolute;
-  width: 58px; height: 4px;
+  width: 58px;
+  height: 4px;
   background: #fff;
   top: 331px;
   left: 65px;
 }
 
-.bars div:first-child{
+.bars div:first-child {
   background: #15477C;
   left: 0;
 }
 
-.bars div:last-child{
+.bars div:last-child {
   left: 130px;
+}
+
+/* main navigation */
+
+.main nav {
+  height: 196px;
+}
+
+.main nav section {
+  flex-basis: 20%;
+  position: relative;
+}
+
+.main nav h2, .main nav p {
+  position: absolute;
+  text-align: center;
+  width: 196px;
+  color: #fff;
+}
+
+.main nav p {
+  letter-spacing: -0.5px;
+}
+
+.main nav h2 {
+  font-size: 18px;
+  bottom: 45px;
+}
+
+.main nav p {
+  font-size: 14px;
+  bottom: 20px;
+}
+
+.main nav section {
+  background-image: url(../img/bigicons.png);
+}
+
+.bigmenu1 {
+  background-color: #7C99B9;
+  background-position: 0 0;
+}
+
+.bigmenu2 {
+  background-color: #4F74A1;
+  background-position: 196px 0;
+}
+
+.bigmenu3 {
+  background-color: #4B8CE0;
+  background-position: 392px 0;
+}
+
+.bigmenu4 {
+  background-color: #3DB5F4;
+  background-position: 588px 0;
+}
+
+.bigmenu5 {
+  background-color: #95C8FF;
+  background-position: 784px 0;
+}
+
+/* main section end */
+
+/* contents start */
+
+.contents {
+  margin: 50px auto;
+}
+
+.contents section {
+  justify-content: space-between;
+}
+
+.contents article {
+  text-overflow: ellipsis;
+  flex-basis: 310px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+
+.contents h2, .contents p {
+  position: absolute;
+}
+
+.contents h2 {
+  left: 15px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.contents p {
+  font-size: 12px;
+  color: #888888;
+  width: 280px;
+  left: 15px;
+  overflow: hidden;
+}
+
+/* articles with picture */
+
+.picture {
+  margin-bottom: 20px;
+  height: 285px;
+}
+
+.picture h2 {
+  top: 200px;
+}
+
+.picture p {
+  top: 235px;
+  height: 35px;
+}
+
+.picture div {
+  height: 180px;
+}
+
+.pic1 div {
+  background: url(../img/pic1.png);
+}
+
+.pic2 div {
+  background: url(../img/pic2.png);
+}
+
+.pic3 div {
+  background: url(../img/pic3.png);
+}
+
+/* articles with icon */
+
+.icon {
+  height: 165px;
+}
+
+.icon h2 {
+  top: 20px;
+}
+
+.icon h2+p {
+  top: 55px;
+  width: 140px;
+  height: 50px;
+}
+
+p.blue {
+  color: #4b8ce0;
+  bottom: 20px;
+}
+
+.icon div {
+  background-image: url(../img/icons.png);
+  top: 0;
+  left: 0;
+  width: 310px;
+  height: 165px;
+}
+
+.i1 div {
+  background-position: 0 0;
+}
+
+.i2 div {
+  background-position: 310px 0;
+}
+
+.i3 div {
+  background-position: 650px 0;
 }
