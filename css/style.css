@@ -316,7 +316,7 @@ header [class*=bar] {
 
 .picture p {
   top: 235px;
-  height: 35px;
+  height: 30px;
 }
 
 .picture div {
@@ -348,7 +348,7 @@ header [class*=bar] {
 .icon h2+p {
   top: 55px;
   width: 140px;
-  height: 50px;
+  height: 55px;
 }
 
 p.blue {
