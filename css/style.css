@@ -98,6 +98,17 @@ header [class*=bar] {
   border-left: 1px solid #336eac;
 }
 
+.global li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.global li:hover {
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff;
+}
+
 .global li:last-child {
   border-right: 1px solid #336eac;
 }
@@ -211,6 +222,12 @@ header [class*=bar] {
   height: 196px;
 }
 
+.main nav a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .main nav section {
   flex-basis: 20%;
   position: relative;
@@ -239,6 +256,11 @@ header [class*=bar] {
 
 .main nav section {
   background-image: url(../img/bigicons.png);
+}
+
+.main nav section:hover {
+  background-color: #1C5DA3;
+  text-shadow: 0 0 10px #fff;
 }
 
 .bigmenu1 {
