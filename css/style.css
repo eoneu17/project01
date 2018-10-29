@@ -191,12 +191,12 @@ header [class*=bar] {
   color: transparent;
 }
 
-/* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .text span {
     background: none;
     color: #fff;
   }
-} */
+}
 
 .subt {
   position: absolute;
