@@ -83,6 +83,14 @@ header [class*=bar] {
   width: 100%;
 }
 
+.sticky{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5);
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
 .global ul {
   height: 45px;
   width: 980px;
@@ -183,12 +191,12 @@ header [class*=bar] {
   color: transparent;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+/* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .text span {
     background: none;
     color: #fff;
   }
-}
+} */
 
 .subt {
   position: absolute;
